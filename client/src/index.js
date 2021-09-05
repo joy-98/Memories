@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducers from './reducers/index'
 import { composeWithDevTools } from 'redux-devtools-extension';
+import './index.css'
 
 const store = createStore(reducers, composeWithDevTools(compose(applyMiddleware(thunk))))
 
