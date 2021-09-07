@@ -47,12 +47,12 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
         <div>
             <Paper className={classes.paper}>
-                <form autoComplete='off' className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+                <form autoComplete='off' noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
                     <Typography variant="h6">{currentId ? 'Edit' : 'Creating'} a Memory</Typography>
-                    <TextField required name="creator" variant="outlined" label="Creator" value={state.creator} fullWidth onChange={(e) => setState({ ...state, creator: e.target.value })} />
-                    <TextField required name="title" variant="outlined" label="Title" value={state.title} fullWidth onChange={(e) => setState({ ...state, title: e.target.value })} />
-                    <TextField required name="message" variant="outlined" label="Message" value={state.message} fullWidth onChange={(e) => setState({ ...state, message: e.target.value })} />
-                    <TextField required name="tags" placeholder="Example: happy,fun,pizza" variant="outlined" label="Tags" value={state.tags} fullWidth onChange={(e) => setState({ ...state, tags: e.target.value.split(',') })} />
+                    <TextField name="creator" variant="outlined" label="Creator" value={state.creator} fullWidth onChange={(e) => setState({ ...state, creator: e.target.value })} />
+                    <TextField name="title" variant="outlined" label="Title" value={state.title} fullWidth onChange={(e) => setState({ ...state, title: e.target.value })} />
+                    <TextField name="message" variant="outlined" label="Message" value={state.message} fullWidth onChange={(e) => setState({ ...state, message: e.target.value })} />
+                    <TextField name="tags" placeholder="Example: #happy #fun" variant="outlined" label="Tags" value={state.tags} fullWidth onChange={(e) => setState({ ...state, tags: e.target.value })} />
                     <div className={classes.fileInput}>
                         <FileBase
                             type="file"
