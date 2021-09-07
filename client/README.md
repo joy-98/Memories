@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Memories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Share your memories
 
 ## Available Scripts
 
